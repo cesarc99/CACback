@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Password": "el gato es negro"
+  },
+  {
+    "Id": 2,
+    "Password": "perro gordo"
+  },
+  {
+    "Id": 3,
+    "Password": "pez azul"
+  },
+  {
+    "Id": 4,
+    "Password": "pajarito verde"
+  },
+  {
+    "Id": 5,
+    "Password": "luna llena"
+  },
+  {
+    "Id": 6,
+    "Password": "eclipse de sol"
+  },
+  {
+    "Id": 7,
+    "Password": "marciano rojo"
+  },
+  {
+    "Id": 8,
+    "Password": "egipcio antiguo"
+  },
+  {
+    "Id": 9,
+    "Password": "matto grosso"
+  }
+]

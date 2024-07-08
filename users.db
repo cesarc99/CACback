@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "NomApe": "Manuel Iglesias",
+    "Direccion": "Direccion 1",
+    "Contacto": "Contacto 1"
+  },
+  {
+    "Id": 2,
+    "NomApe": "Ines Cobo",
+    "Direccion": "Direccion 2",
+    "Contacto": "Contacto 2"
+  },
+  {
+    "Id": 3,
+    "NomApe": "Luis Rey",
+    "Direccion": "Direccion 3",
+    "Contacto": "Contacto 3"
+  },
+  {
+    "Id": 4,
+    "NomApe": "Julio Ramos",
+    "Direccion": "Direccion 4",
+    "Contacto": "Contacto 4"
+  },
+  {
+    "Id": 5,
+    "NomApe": "Clara Pinto",
+    "Direccion": "Direccion 5",
+    "Contacto": "Contacto 5"
+  },
+  {
+    "Id": 6,
+    "NomApe": "Pedro Rico",
+    "Direccion": "Direccion 6",
+    "Contacto": "Contacto 6"
+  },
+  {
+    "Id": 7,
+    "NomApe": "Oscar Arce",
+    "Direccion": "Direccion 7",
+    "Contacto": "Contacto 7"
+  },
+  {
+    "Id": 8,
+    "NomApe": "Raul Gallardo",
+    "Direccion": "Direccion 8",
+    "Contacto": "Contacto 8"
+  },
+  {
+    "Id": 9,
+    "NomApe": "Sonia Ruiz",
+    "Direccion": "Direccion 9",
+    "Contacto": "Contacto 9"
+  }
+]
