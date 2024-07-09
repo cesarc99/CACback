@@ -27,8 +27,8 @@ def services():
                     'method': 'GET',
                     'body': 
                         {
-                            'IdFrom': 'Id de usuario desde', 
-                            'IdTo': 'Id de usuario hasta'
+                            'fromId': 'Id de usuario desde', 
+                            'qty': 'Cantidad de usuarios'
                         } 
                 },
                 {
@@ -80,7 +80,7 @@ def create_user():
 
     user = User.get_user_by_id(data['Id'])
     if user:
-        return jsonify({'msg': 'User Id aleady exists', 'sts': 1})
+        return jsonify({'msg': 'Ya existe User: ' + user.toStringArray(), 'sts': 1})
    
     new_user = User(
         Id=data['Id'],
@@ -89,29 +89,34 @@ def create_user():
         Contacto=data['Contacto']
     )
     new_user.add()
-    return jsonify({'msg': 'User created successfully', 'sts': 0}), 201
+    return jsonify({'msg': 'Alta exitosa de User: ' + new_user.toStringArray(), 'sts': 0}), 201
 
 def update_user(user_id):
     user = User.get_user_by_id(user_id)
     if not user:
-        return jsonify({'msg': 'User not found', 'sts': 1}), 404
+        return jsonify({'msg': 'No existe User con clave: ' + user_id, 'sts': 1}), 404
    
     data = request.json
-    user.NomApe=data['NomApe'],
-    user.Direccion=data['Direccion'],
-    user.Contacto=data['Contacto']
-    user.upd()
-    return jsonify({'msg': 'User updated successfully', 'sts': 0})
+    upd_user = User(
+        Id=data['Id'],
+        NomApe=data['NomApe'],
+        Direccion=data['Direccion'],
+        Contacto=data['Contacto']
+    )
+    upd_user.upd()
+    return jsonify({'msg': 'Modificación exitosa de User: ' + upd_user.toStringArray(), 'sts': 0})
 
 def delete_user(user_id):
     user = User.get_user_by_id(user_id)
     if not user:
-        return jsonify({'msg': 'User not found', 'sts': 1}), 404
-   
+        return jsonify({'msg': 'No existe User con clave: ' + user_id, 'sts': 1}), 404
+
     user.delete()
-    return jsonify({'msg': 'User deleted successfully', 'sts': 0})
+    return jsonify({'msg': 'Baja exitosa de User: ' + user.toStringArray(), 'sts': 0})
+
 
 """
+
 def get_pending_tasks():
     tasks = Task.get_all_pending()
     return jsonify([task.serialize() for task in tasks])

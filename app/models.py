@@ -100,3 +100,8 @@ class User:
             'Contacto': self.Contacto
         }
     
+    def toStringArray(self):
+        return "[ " + self.Id + ", " + self.NomApe + ", " + self.Direccion + ", " + self.Contacto + " ]" 
+
+
+    
